@@ -1,61 +1,48 @@
 ---
 marp: true
-theme: custom-theme
+theme: my-theme
+class: lead
 paginate: true
-backgroundColor: #ffffff
 ---
 
-<!-- Custom Theme -->
+<!-- theme: my-theme -->
 <style>
 section {
-  font-family: 'Arial';
+  font-family: 'Arial', sans-serif;
 }
 h1 {
-  color: #0033aa;
+  color: #234;
 }
 footer {
   font-size: 12px;
-  color: gray;
 }
 </style>
 
-<!-- Slide 1 -->
-# Product Documentation Overview
-**Author:** 23f1001996@ds.study.iitm.ac.in  
-Welcome to the Marp-based product documentation presentation.
+# Product Documentation Presentation  
+### Made with Marp  
+**Author:** Shravani  
+**Email:** 23f1001996@ds.study.iitm.ac.in
 
 ---
 
-<!-- Slide 2: Background Image -->
-![bg](https://images.unsplash.com/photo-1522199710521-72d69614c702)
-
-# Platform Architecture  
-Using a background image to illustrate structure.
-
----
-
-<!-- Slide 3: Mathematical Equation -->
-# Algorithmic Complexity  
-The complexity of merge sort is:
-
-\[
-T(n) = O(n \log n)
-\]
+# Overview  
+- Product documentation workflow  
+- Version-controlled Markdown  
+- Easy export (PDF, PPTX, HTML)  
+- Custom Marp theming  
+- Mathematical notation support  
 
 ---
 
-<!-- Slide 4: Custom Style + Bullet Points -->
-# Key Features
-- Fully version-controlled documentation  
-- Exportable to HTML, PDF, PPTX  
-- Lightweight markdown-based workflow  
-- Custom themes for consistent branding  
+<!-- backgroundImage: "https://picsum.photos/1200/800?blur=2" -->
+<!-- backgroundSize: cover -->
+
+# Background Image Slide  
+This slide uses a **full-screen background image**.
 
 ---
 
-<!-- Slide 5: Code Block -->
-# API Example
-
+# Code Example  
 ```python
-def calculate_fee(amount):
-    return amount * 0.015
+def hello():
+    print("Hello, Marp!")
