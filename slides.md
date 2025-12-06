@@ -1,48 +1,47 @@
 ---
 marp: true
-theme: my-theme
-class: lead
+theme: custom-theme
 paginate: true
+pagestyle: true
+header: '**Product Documentation – AcmeFlow v2.4**'
+footer: 'Contact: 23f1001996@ds.study.iitm.ac.in'
+class: invert
+style: |
+  section { font-family: "Fira Sans", sans-serif; }
+  h1, h2 { color: #00a8cc; }
+  code { background: #2d2d2d; padding: 2px 6px; border-radius: 4px; }
+  pre { background: #1e1e1e; }
+  .columns { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+  footer { color: #aaa; font-size: 0.6em; }
 ---
 
-<!-- theme: my-theme -->
-<style>
-section {
-  font-family: 'Arial', sans-serif;
-}
-h1 {
-  color: #234;
-}
-footer {
-  font-size: 12px;
-}
-</style>
+<!-- _backgroundImage: url("https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?q=80&w=2070&auto=format&fit=crop) -->
+<!-- _class: invert lead -->
 
-# Product Documentation Presentation  
-### Made with Marp  
-**Author:** Shravani  
-**Email:** 23f1001996@ds.study.iitm.ac.in
+# AcmeFlow v2.4  
+**Product Documentation**
 
----
-
-# Overview  
-- Product documentation workflow  
-- Version-controlled Markdown  
-- Easy export (PDF, PPTX, HTML)  
-- Custom Marp theming  
-- Mathematical notation support  
+Modern, scalable workflow automation platform
 
 ---
 
-<!-- backgroundImage: "https://picsum.photos/1200/800?blur=2" -->
-<!-- backgroundSize: cover -->
+# Why Choose Markdown + Marp?
 
-# Background Image Slide  
-This slide uses a **full-screen background image**.
+- Fully version-controlled (Git)
+- Single source of truth
+- Export to HTML, PDF, PPTX with one command
+- Beautiful slides without PowerPoint lock-in
+- Supports LaTeX, diagrams, code highlighting
 
 ---
 
-# Code Example  
-```python
-def hello():
-    print("Hello, Marp!")
+# Core Architecture
+
+```mermaid
+graph TD
+graph LR
+    A[Client Apps] --> B[API Gateway]
+    B --> C[Microservices]
+    C --> D[(PostgreSQL)]
+    C --> E[Redis Cache]
+    C --> F[Kafka Queue]
