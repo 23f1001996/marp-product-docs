@@ -1,47 +1,55 @@
 ---
 marp: true
-theme: custom-theme
+theme: gaia
 paginate: true
-pagestyle: true
-header: '**Product Documentation – AcmeFlow v2.4**'
-footer: 'Contact: 23f1001996@ds.study.iitm.ac.in'
-class: invert
+_paginate: true
+size: 16:9
+header: 'AcmeFlow v2.4 – Product Documentation'
+footer: '23f1001996@ds.study.iitm.ac.in'
 style: |
-  section { font-family: "Fira Sans", sans-serif; }
-  h1, h2 { color: #00a8cc; }
-  code { background: #2d2d2d; padding: 2px 6px; border-radius: 4px; }
-  pre { background: #1e1e1e; }
-  .columns { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-  footer { color: #aaa; font-size: 0.6em; }
+  section { font-family: "Inter", sans-serif; }
+  section.lead { justify-content: center; text-align: center; }
+  h1 { color: #0ea5e9; }
+  h2 { color: #38bdf8; }
+  code { background: #1e293b; padding: 0.2em 0.4em; border-radius: 6px; }
+  pre { background: #0f172a; }
 ---
 
-<!-- _backgroundImage: url("https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?q=80&w=2070&auto=format&fit=crop) -->
-<!-- _class: invert lead -->
+<!-- 
+  Marp directives used in this slide:
+  - _backgroundImage
+  - _class
+  - _paginate (inherited from front-matter)
+  - _color (custom text color)
+-->
+<!-- _backgroundImage: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop') -->
+<!-- _class: lead -->
+<!-- _color: #ffffff -->
 
-# AcmeFlow v2.4  
-**Product Documentation**
+# AcmeFlow v2.4
+### Product Documentation Presentation
 
-Modern, scalable workflow automation platform
+Built with **Marp** – Markdown → Slides → Git-friendly
 
 ---
 
-# Why Choose Markdown + Marp?
+# Why Marp for Technical Documentation?
 
-- Fully version-controlled (Git)
-- Single source of truth
-- Export to HTML, PDF, PPTX with one command
-- Beautiful slides without PowerPoint lock-in
-- Supports LaTeX, diagrams, code highlighting
+- 100% plain Markdown in Git
+- Instant HTML, PDF, PPTX export
+- Full version control & diff-friendly
+- LaTeX math, Mermaid diagrams, code highlighting
+- Custom themes & CSS in the same repo
 
 ---
 
 # Core Architecture
 
 ```mermaid
-graph TD
 graph LR
-    A[Client Apps] --> B[API Gateway]
-    B --> C[Microservices]
-    C --> D[(PostgreSQL)]
-    C --> E[Redis Cache]
-    C --> F[Kafka Queue]
+    A[Web / Mobile Apps] --> B[API Gateway]
+    B --> C[Auth Service]
+    B --> D[Workflow Engine]
+    D --> E[Task Queue<br/>(Kafka)]
+    D --> F[(PostgreSQL)]
+    D --> G[Redis Cache]
